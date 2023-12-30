@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find your favorite restaurant"/>
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="manifest" href="./app.webmanifest" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Restaurant Catalog</title>
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-link" tabindex="0">Menuju ke konten</a>
+    <header class="app-bar">
+      <div class="app-bar__menu">
+        <button id="hamburgerButton" class="header__menu material-symbols-outlined" aria-label="hamburger button">menu</button>
+      </div>
+      <div class="app-bar__brand">
+        <h1>Restaurant Catalog</h1>
+      </div>
+      <nav id="navigationDrawer" class="app-bar__navigation">
+        <ul>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/like">Favorite</a></li>
+          <li><a href="https://naufalattaqiy.blogspot.com" target="blank" rel="noreferrer noopener">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero">
+      <picture>
+        <source media="(max-width: 480px)" srcset="../images/heros/hero-img-small.jpg">
+        <source media="(max-width: 800px)" srcset="../images/heros/hero-img-medium.jpg">
+        <img class="hero__img" src="./images/heros/hero-img.jpg" alt="hero image">
+      </picture>
+    </div>
+    <main id="mainContent" tabindex="0"></main>
+    <footer>
+      <p>&copy; 2023 - Restaurant Catalog</p>
+  </footer>
+  </body>
+</html>

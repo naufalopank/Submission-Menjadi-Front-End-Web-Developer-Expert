@@ -1,0 +1,384 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/*
+    Skip to Content
+  */
+
+.skip-link {
+  position: absolute;
+  top: -62px;
+  left: 3px;
+  display: flex;
+  align-items: center;
+  background-color: #645e5e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 3px;
+  outline: 3px solid white;
+}
+
+/*
+    AppBar
+  */
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  align-content: center;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Arial", cursive;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  padding: 8px 8px 0 8px;
+  text-decoration: none;
+  color: #ffffff;  
+  width: 100%;
+}
+
+.app-bar .app-bar__navigation ul li a:hover {
+  text-decoration: underline;
+  color: #636666;
+}
+
+/*
+    Hero / Jumbotron
+  */
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-position: center;
+}
+
+.hero__img {
+  width: 100%;
+  min-height: 480px;
+  object-fit: cover;
+}
+
+/*
+    Main Content
+  */
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-family: 'Arial';
+  font-weight: bold;
+  font-weight: normal;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+    Restaurants
+  */
+
+.restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/*
+    Restaurant Item
+  */
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item__header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+  width: 100%;
+}
+
+.restaurant-item__header__poster {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.restaurant-item .restaurant-item__header .restaurant-item__header__rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: white;
+  color: black;
+}
+
+.restaurant-item
+  .restaurant-item__header
+  .restaurant-item__header__rating
+  .restaurant-item__header__rating__score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item__content {
+  padding: 16px;
+}
+
+.restaurant-item .restaurant-item__content h3 {
+  margin: 0 0 10px 0;
+}
+
+.restaurant-item .restaurant-item__content h3 a {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.restaurant-item .restaurant-item__content h3 a:hover {
+  text-decoration: underline;
+}
+
+.restaurant-item .restaurant-item__content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+/*
+    Reveiw
+  */
+.detail-review {
+  max-width: 100%;
+  font-size: 1em;
+  text-align: center;
+}
+
+.detail-review-item {
+  color: black;
+  background-color: rgba(108, 115, 139, 0.705);
+  margin-bottom: 1.5em;
+  padding: 1em 1em;
+  background: rgba(0, 0, 0, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.1px);
+  -webkit-backdrop-filter: blur(7.1px);
+  border: 1px solid rgba(62, 86, 65, 1);
+}
+
+.detail-review-item:last-child {
+  margin-bottom: 0;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 1em;
+  color: #000000;
+  border-bottom: 1px solid black;
+}
+
+.review-name {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.review-date {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+.review-body {
+  padding: 1em;
+  text-align: left;
+}
+
+.detail-food li:hover,
+.detail-drink li:hover,
+.detail-review-item:hover {
+  box-shadow: 0px 10px 13px -7px var(#aaaaaa), 5px 5px 15px 5px var(#83bca9);
+}
+
+/*
+    Restaurant
+  */
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant .restaurant__poster {
+  width: 100%;
+  max-width: 400px;
+}
+
+.restaurant .restaurant__info h4 {
+  margin: 8px 0;
+  border-bottom: 1px solid black;
+}
+
+.restaurant .restaurant__overview h3 {
+  margin: 8px 0;
+  border-bottom: 1px solid black;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/*
+  Button
+*/
+ 
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #DB0000;
+  border: 1px solid #770000;
+  border-radius: 4px;
+ 
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+ 
+  cursor: pointer;
+  transition: .15s ease-in-out;
+}
+ 
+.btn:hover {
+  background-color: #DB0000BB;
+}
+.btn:active {
+  background-color: #DB0000DD;
+}
+.btn:focus-visible {
+  outline: 3px solid #DB000055;
+}
+
+/*
+    Footer
+  */
+
+  footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
